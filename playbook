@@ -1,13 +1,3 @@
-- hosts: localhost
-  tasks:
-     - name: Create a github Repo
-       github_repo:
-        github_auth_key: "{{ git_key }}"
-        name: "create-module"
-        description: "Ansible module for github"
-        private: no
-        has_issues: no
-        has_wiki: no
-        has_downloads: no
-        state: present
-       register: result
+- hosts: pcspecialist
+  roles:
+    - module
